@@ -34,7 +34,7 @@ import select
 
 thread_lock = Lock()
 
-
+algorithm = '1'
 def install(package):
     try:
         pip.main(["install",  package])
@@ -498,6 +498,7 @@ def loadConfig():
             threadcount = 1
 
         # Check wheter algo setting is correct
+        
         if algorithm == "2":
             algorithm = "XXHASH"
         else:
